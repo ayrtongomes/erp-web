@@ -21,7 +21,7 @@ const ClientForm = () => {
      * Function that call POST API request to register the new Client
      */
     const postClient = (values) => {
-        axios.post(`https://localhost:5001/Api/Client/`, values)
+        axios.post(`https://localhost:44372/api/fornecedores/`, values)
             .then(res => {
                 alert("IP cadastrado com sucesso!")
                 history.push("/ips");

@@ -23,7 +23,7 @@ class ListAllIps extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://localhost:5001/Api/Client`)
+        axios.get(`https://localhost:44372/api/fornecedores/`)
             .then(res => {
                 this.setState({ clients: res.data });
             })

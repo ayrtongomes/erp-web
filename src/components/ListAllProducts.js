@@ -25,7 +25,7 @@ class ListAllProducts extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://localhost:44372/api/GetProdutos`)
+        axios.get(`https://localhost:44372/api/getProdutos`)
             .then(res => {
                 this.setState({ clients: res.data });
             })
