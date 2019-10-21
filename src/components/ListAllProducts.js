@@ -32,7 +32,11 @@ class ListAllProducts extends React.Component {
                         .then(resp => {
                             let all = this.state.clients;
                             resp.data.map(p => {
-                                all.push(p);
+                                let obj = {
+                                    ip: x.ip,
+                                    product: p
+                                }
+                                all.push(obj);
                             })
                             this.setState({ clients: all });
                         })
@@ -49,6 +53,7 @@ class ListAllProducts extends React.Component {
                     <TableHead>
                         <TableRow>
                             <TableCell>Id</TableCell>
+                            <TableCell>IP</TableCell>
                             <TableCell>Nome</TableCell>
                             <TableCell>Quantidade</TableCell>
                             <TableCell>Lote minímo</TableCell>
@@ -59,7 +64,8 @@ class ListAllProducts extends React.Component {
                         {this.state.clients.map((item, i) => {
                             return (
                                 <TableRow key={`row-${i}`}>
-                                    <TableCell>{item.id}</TableCell>
+                                    <TableCell>{item.product.id}</TableCell>
+                                    <TableCell>{item.ip}</TableCell>
                                     <TableCell>{item.produto}</TableCell>
                                     <TableCell>{item.qtde}</TableCell>
                                     <TableCell>{item.loteMinimo}</TableCell>
