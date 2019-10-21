@@ -25,10 +25,20 @@ class ListAllProducts extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://localhost:44372/api/getProdutos`)
+        axios.get(`https://localhost:44372/api/fornecedores/`)
             .then(res => {
-                this.setState({ clients: res.data });
+                res.data.map(x => {
+                    axios.get(`${x.ip}/api/getProdutos`)
+                        .then(resp => {
+                            let all = this.state.clients;
+                            resp.data.map(p => {
+                                all.push(p);
+                            })
+                            this.setState({ clients: all });
+                        })
+                })
             })
+
     }
 
     render() {
