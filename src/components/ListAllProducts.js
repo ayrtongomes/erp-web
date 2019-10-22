@@ -53,7 +53,7 @@ class ListAllProducts extends React.Component {
                     <TableHead>
                         <TableRow>
                             <TableCell>Id</TableCell>
-                            <TableCell>IP</TableCell>
+                            <TableCell>Origem</TableCell>
                             <TableCell>Nome</TableCell>
                             <TableCell>Quantidade</TableCell>
                             <TableCell>Lote minímo</TableCell>
@@ -66,10 +66,10 @@ class ListAllProducts extends React.Component {
                                 <TableRow key={`row-${i}`}>
                                     <TableCell>{item.product.id}</TableCell>
                                     <TableCell>{item.ip}</TableCell>
-                                    <TableCell>{item.produto}</TableCell>
-                                    <TableCell>{item.qtde}</TableCell>
-                                    <TableCell>{item.loteMinimo}</TableCell>
-                                    <TableCell>{item.preco}</TableCell>
+                                    <TableCell>{item.product.produto}</TableCell>
+                                    <TableCell>{item.product.qtde}</TableCell>
+                                    <TableCell>{item.product.loteMinimo}</TableCell>
+                                    <TableCell>{item.product.preco}</TableCell>
                                 </TableRow>
                             );
                         })}
