@@ -83,6 +83,18 @@ class Report extends React.Component {
                                     <span>{inventary.itensInventario.length}</span>
                                 </p>
                             </Grid>
+                            <Grid item xs={12} spacing={3} >
+                                <p style={{ display: 'grid', textAlign: 'left' }}>
+                                    <small style={{ color: '#606060', fontWeight: '600' }}>Custo total</small>
+                                    <span>{inventary.custoTotal}</span>
+                                </p>
+                            </Grid>
+                            <Grid item xs={12} spacing={3} >
+                                <p style={{ display: 'grid', textAlign: 'left' }}>
+                                    <small style={{ color: '#606060', fontWeight: '600' }}>Custo médio</small>
+                                    <span>{inventary.custoMedio}</span>
+                                </p>
+                            </Grid>
                         </Grid>
                         : 'Não foi encontrado o relatório'
                     }
