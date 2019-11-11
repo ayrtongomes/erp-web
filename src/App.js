@@ -4,7 +4,8 @@ import './App.css';
 import HeaderAppBar from './components/AppBar';
 import ListAllIps from './components/ListAllIps';
 import ListAllProducts from './components/ListAllProducts';
-import ClientForm from './components/form/ClientForm';
+import Inventary from './components/Inventary';
+import Report from './components/Report';
 
 function App() {
   return (
@@ -12,14 +13,14 @@ function App() {
       <div className="App">
         <HeaderAppBar />
         <Switch>
-          <Route path="/ips">
-            <ListAllIps />
+          <Route path="/report/:id">
+            <Report />
           </Route>
           <Route path="/produtos">
             <ListAllProducts />
           </Route>
-          <Route path="/ip/new">
-            <ClientForm />
+          <Route path="/inventary/new">
+            <Inventary />
           </Route>
         </Switch>
       </div>

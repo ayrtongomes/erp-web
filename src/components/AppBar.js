@@ -89,15 +89,15 @@ export default function HeaderAppBar() {
                     <Typography variant="h6" className={classes.title}>
                         ERP
                     </Typography>
-                    <NavLink to="/ip/new">
-                        <Button color="inherit" style={{ color: 'white' }}>Cadastrar IP</Button>
+                    <NavLink to="/inventary/new">
+                        <Button color="inherit" style={{ color: 'white' }}>Realizar inventário</Button>
                     </NavLink>
-                    <NavLink to="/ips">
+                    {/* <NavLink to="/ips">
                         <Button color="inherit" style={{ color: 'white' }}>Listar IPS</Button>
-                    </NavLink>
-                    <NavLink to="/produtos">
+                    </NavLink> */}
+                    {/* <NavLink to="/produtos">
                         <Button color="inherit" style={{ color: 'white' }}>Listar produtos</Button>
-                    </NavLink>
+                    </NavLink> */}
                 </Toolbar>
             </AppBar>
         </div>
